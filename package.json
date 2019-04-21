@@ -1,0 +1,13 @@
+{
+  "name": "@8area8/domstrict",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "push": "npm publish --access=public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
