@@ -1,13 +1,33 @@
 {
   "name": "@8area8/domstrict",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Wrapper for basic javascript DOM methods.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "push": "npm publish --access=public"
+    "test": "jest",
+    "push": "npm publish --access=public",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/8area8/domstrict.git"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      "^.+\\.tsx?$": "ts-jest"
+    }
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.13.6",
+    "babel-jest": "^24.7.1",
+    "jest": "^24.7.1",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.4.4"
+  }
 }
