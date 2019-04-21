@@ -1,6 +1,6 @@
 {
   "name": "@8area8/domstrict",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Wrapper for basic javascript DOM methods.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
