@@ -28,8 +28,11 @@ export default class Get {
   }
 
   /** Get an element by query selector. Return the element or throw an Error. */
-  static query(selector: string): Element {
-    const $element = document.querySelector(selector);
+  static query(
+    selector: string,
+    $base: HTMLElement | Document = document
+  ): Element {
+    const $element = $base.querySelector(selector);
 
     if (!$element) {
       throw new Error(`Element ${selector} is missing !`);
@@ -39,8 +42,11 @@ export default class Get {
   }
 
   /** Get an element by query selector. Return an array or throw an Error. */
-  static queryAll(selector: string): Element[] {
-    const $elements = document.querySelectorAll(selector);
+  static queryAll(
+    selector: string,
+    $base: HTMLElement | Document = document
+  ): Element[] {
+    const $elements = $base.querySelectorAll(selector);
 
     if (!$elements.length) {
       throw new Error(`Elements ${selector} are missing !`);

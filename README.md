@@ -2,6 +2,11 @@
 
 wrapper for the "getElement" and "querySelector" methods. Return the element or an error.
 
+## News
+
+Add the `$base` parameter for query and queryAll.
+**Todo**: Create tests and update the documentation.
+
 ## Installation
 
 ```sh

@@ -29,8 +29,9 @@ var Get = /** @class */ (function () {
         }
     };
     /** Get an element by query selector. Return the element or throw an Error. */
-    Get.query = function (selector) {
-        var $element = document.querySelector(selector);
+    Get.query = function (selector, $base) {
+        if ($base === void 0) { $base = document; }
+        var $element = $base.querySelector(selector);
         if (!$element) {
             throw new Error("Element " + selector + " is missing !");
         }
@@ -39,8 +40,9 @@ var Get = /** @class */ (function () {
         }
     };
     /** Get an element by query selector. Return an array or throw an Error. */
-    Get.queryAll = function (selector) {
-        var $elements = document.querySelectorAll(selector);
+    Get.queryAll = function (selector, $base) {
+        if ($base === void 0) { $base = document; }
+        var $elements = $base.querySelectorAll(selector);
         if (!$elements.length) {
             throw new Error("Elements " + selector + " are missing !");
         }
